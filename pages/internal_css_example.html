@@ -4,11 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Firefox ui structure</title>
+    <title>Introduction to internal css</title>
+    <style>
+            #container{
+                width: 100%;
+            }
+            #section-one{
+                width: 20%; 
+                border:1px solid red; 
+                height: 650px; 
+                position: fixed;
+            }
+    </style>
 </head>
 <body>
-    <div style="width: 100%;">
-        <section style="width: 20%; border:1px solid red; height: 650px; position: fixed;">
+    <div id="container">
+        <section id="section-one">
             <div style="border: 1px solid blue; height: 400px; width: 100%;"></div>
             <div style="border: 1px solid blue; height: 250px; width: 100%; bottom:0; position: absolute;"></div>
         </section>
