@@ -1,0 +1,58 @@
+body{
+    background-color: white;
+}
+.container{
+    border: 1px solid black;
+    width: 500px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+.display-flex{
+    display: flex;
+}
+#container-one{
+    justify-content: space-between;
+}
+#container-two{
+    justify-content: space-around;
+}
+#container-three{
+    justify-content: space-around;
+
+}
+
+.box-sizing{
+    width: 100px;
+    height: 100px;
+}
+.box-red{
+    border: 1px solid red;
+}
+.box-maroon{
+    border: 1px solid maroon;
+}
+.box-black{
+    border: 1px solid black;
+}
+
+/* Dropdown menu css */
+#dropdown-button{
+    background-color: red;
+    width: 300px;
+    height: 50px;
+    font-size: 40px;
+    padding: 10px;
+    cursor: pointer;
+}
+#dropdown-button #dropdown-menu{
+    width: 500px;
+    height: 300px;
+    background-color: blue;
+    visibility: hidden;
+    margin-left: 300px;
+}
+
+#dropdown-button:hover #dropdown-menu{
+    background-color: yellow;
+    visibility: visible;
+}

@@ -28,16 +28,22 @@
         }
         #container{
             width: 100%;
-            background-color:blue;
+            height: 100%;
+            position: fixed;
+            background-color:#131c21;
         }
         #chat-area{
             padding-top: 40px;
             display: flex;
             width: 100%;
             height: 660px;
+            overflow: hidden;
+        }
+        #sidebar{
+            width: 30%;
+            height: 78%;
         }
         #friend-list{
-            width: 30%;
             height: 100%;
             overflow: scroll;
             background-color: #131c21;
@@ -45,10 +51,19 @@
             border-right: 1px solid var(--border-gray);
         }
         #message-area{
-            width: 70%;
+            width: 100%;
             height: 100%;
             background-color: #252d30;
-            color: red;
+            color: white;
+            font-family: "Segoe UI";
+            display: flex;
+            font-style: normal;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        #action-area{
+            background-color:#131c21;
         }
         #action-keys {
             padding: 10px;
@@ -98,6 +113,12 @@
             background-color: var(--primary);
             padding: 2px 3px 2px 3px;
             border-radius: 100%;
+            width: 20px;
+            height: 20px;
+            text-align: center;
+        }
+        span{
+            color: var(--primary);
         }
     </style>
 </head>
@@ -107,138 +128,210 @@
             <span>WhatsApp</span>
         </div>
         <div id="chat-area">
-            <div id="friend-list">
-                <div id="action-keys">
-                    <img class="image-circle" src="/images/backgrounds/inline_image_preview.jpg" alt="">
+            <div id="sidebar">
+                <div id="action-area">
+                    <div id="action-keys">
+                        <img class="image-circle" src="/images/backgrounds/inline_image_preview.jpg" alt="">
+                    </div>
+                    <div id="search-bar">
+                        <input type="text">
+                    </div>
                 </div>
-                <div id="search-bar">
-                    <input type="text">
-                </div>
-                <div id="list-container">
-                    <div class="friend">
-                        <div class="friend-image">
-                            <img class="image-circle" src="/images/backgrounds/inline_image_preview.jpg" alt="">
-                        </div>
-                        <div class="friend-info">
-                            <div class="friend-name">
-                                <strong>NkemJW </strong>
-                                <span>10:16am</span>
-                            </div> 
-                            <div class="friend-msg">
-                                <strong>Missed video call </strong>
-                                <span class="badge">2</span>
+                <div id="friend-list">
+                    <div id="list-container">
+                        <div class="friend">
+                            <div class="friend-image">
+                                <img class="image-circle" src="/images/backgrounds/inline_image_preview.jpg" alt="">
+                            </div>
+                            <div class="friend-info">
+                                <div class="friend-name">
+                                    <strong>NkemJW </strong>
+                                    <span>10:16am</span>
+                                </div> 
+                                <div class="friend-msg">
+                                    <strong>Missed video call </strong>
+                                    <span class="badge">2</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="friend">
-                        <div class="friend-image">
-                            <img class="image-circle" src="/images/backgrounds/inline_image_preview.jpg" alt="">
-                        </div>
-                        <div class="friend-info">
-                            <div class="friend-name">
-                                <strong>NkemJW </strong>
-                                <span>10:16am</span>
-                            </div> 
-                            <div class="friend-msg">
-                                <strong>Missed video call </strong>
-                                <span class="badge">2</span>
+                        <div class="friend">
+                            <div class="friend-image">
+                                <img class="image-circle" src="/images/backgrounds/inline_image_preview.jpg" alt="">
+                            </div>
+                            <div class="friend-info">
+                                <div class="friend-name">
+                                    <strong>NkemJW </strong>
+                                    <span>10:16am</span>
+                                </div> 
+                                <div class="friend-msg">
+                                    <strong>Missed video call </strong>
+                                    <span class="badge">2</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="friend">
-                        <div class="friend-image">
-                            <img class="image-circle" src="/images/backgrounds/inline_image_preview.jpg" alt="">
-                        </div>
-                        <div class="friend-info">
-                            <div class="friend-name">
-                                <strong>NkemJW </strong>
-                                <span>10:16am</span>
-                            </div> 
-                            <div class="friend-msg">
-                                <strong>Missed video call </strong>
-                                <span class="badge">2</span>
+                        <div class="friend">
+                            <div class="friend-image">
+                                <img class="image-circle" src="/images/backgrounds/inline_image_preview.jpg" alt="">
+                            </div>
+                            <div class="friend-info">
+                                <div class="friend-name">
+                                    <strong>NkemJW </strong>
+                                    <span>10:16am</span>
+                                </div> 
+                                <div class="friend-msg">
+                                    <strong>Missed video call </strong>
+                                    <span class="badge">2</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="friend">
-                        <div class="friend-image">
-                            <img class="image-circle" src="/images/backgrounds/inline_image_preview.jpg" alt="">
-                        </div>
-                        <div class="friend-info">
-                            <div class="friend-name">
-                                <strong>NkemJW </strong>
-                                <span>10:16am</span>
-                            </div> 
-                            <div class="friend-msg">
-                                <strong>Missed video call </strong>
-                                <span class="badge">2</span>
+                        <div class="friend">
+                            <div class="friend-image">
+                                <img class="image-circle" src="/images/backgrounds/inline_image_preview.jpg" alt="">
+                            </div>
+                            <div class="friend-info">
+                                <div class="friend-name">
+                                    <strong>NkemJW </strong>
+                                    <span>10:16am</span>
+                                </div> 
+                                <div class="friend-msg">
+                                    <strong>Missed video call </strong>
+                                    <span class="badge">2</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="friend">
-                        <div class="friend-image">
-                            <img class="image-circle" src="/images/backgrounds/inline_image_preview.jpg" alt="">
-                        </div>
-                        <div class="friend-info">
-                            <div class="friend-name">
-                                <strong>NkemJW </strong>
-                                <span>10:16am</span>
-                            </div> 
-                            <div class="friend-msg">
-                                <strong>Missed video call </strong>
-                                <span class="badge">2</span>
+                        <div class="friend">
+                            <div class="friend-image">
+                                <img class="image-circle" src="/images/backgrounds/inline_image_preview.jpg" alt="">
+                            </div>
+                            <div class="friend-info">
+                                <div class="friend-name">
+                                    <strong>NkemJW </strong>
+                                    <span>10:16am</span>
+                                </div> 
+                                <div class="friend-msg">
+                                    <strong>Missed video call </strong>
+                                    <span class="badge">2</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="friend">
-                        <div class="friend-image">
-                            <img class="image-circle" src="/images/backgrounds/inline_image_preview.jpg" alt="">
-                        </div>
-                        <div class="friend-info">
-                            <div class="friend-name">
-                                <strong>NkemJW </strong>
-                                <span>10:16am</span>
-                            </div> 
-                            <div class="friend-msg">
-                                <strong>Missed video call </strong>
-                                <span class="badge">2</span>
+                        <div class="friend">
+                            <div class="friend-image">
+                                <img class="image-circle" src="/images/backgrounds/inline_image_preview.jpg" alt="">
+                            </div>
+                            <div class="friend-info">
+                                <div class="friend-name">
+                                    <strong>NkemJW </strong>
+                                    <span>10:16am</span>
+                                </div> 
+                                <div class="friend-msg">
+                                    <strong>Missed video call </strong>
+                                    <span class="badge">2</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="friend">
-                        <div class="friend-image">
-                            <img class="image-circle" src="/images/backgrounds/inline_image_preview.jpg" alt="">
-                        </div>
-                        <div class="friend-info">
-                            <div class="friend-name">
-                                <strong>NkemJW </strong>
-                                <span>10:16am</span>
-                            </div> 
-                            <div class="friend-msg">
-                                <strong>Missed video call </strong>
-                                <span class="badge">2</span>
+                        <div class="friend">
+                            <div class="friend-image">
+                                <img class="image-circle" src="/images/backgrounds/inline_image_preview.jpg" alt="">
+                            </div>
+                            <div class="friend-info">
+                                <div class="friend-name">
+                                    <strong>NkemJW </strong>
+                                    <span>10:16am</span>
+                                </div> 
+                                <div class="friend-msg">
+                                    <strong>Missed video call </strong>
+                                    <span class="badge">2</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="friend">
-                        <div class="friend-image">
-                            <img class="image-circle" src="/images/backgrounds/inline_image_preview.jpg" alt="">
+                        <div class="friend">
+                            <div class="friend-image">
+                                <img class="image-circle" src="/images/backgrounds/inline_image_preview.jpg" alt="">
+                            </div>
+                            <div class="friend-info">
+                                <div class="friend-name">
+                                    <strong>NkemJW </strong>
+                                    <span>10:16am</span>
+                                </div> 
+                                <div class="friend-msg">
+                                    <strong>Missed video call </strong>
+                                    <span class="badge">2</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="friend-info">
-                            <div class="friend-name">
-                                <strong>NkemJW </strong>
-                                <span>10:16am</span>
-                            </div> 
-                            <div class="friend-msg">
-                                <strong>Missed video call </strong>
-                                <span class="badge">2</span>
+                        <div class="friend">
+                            <div class="friend-image">
+                                <img class="image-circle" src="/images/backgrounds/inline_image_preview.jpg" alt="">
+                            </div>
+                            <div class="friend-info">
+                                <div class="friend-name">
+                                    <strong>NkemJW </strong>
+                                    <span>10:16am</span>
+                                </div> 
+                                <div class="friend-msg">
+                                    <strong>Missed video call </strong>
+                                    <span class="badge">2</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="friend">
+                            <div class="friend-image">
+                                <img class="image-circle" src="/images/backgrounds/inline_image_preview.jpg" alt="">
+                            </div>
+                            <div class="friend-info">
+                                <div class="friend-name">
+                                    <strong>NkemJW </strong>
+                                    <span>10:16am</span>
+                                </div> 
+                                <div class="friend-msg">
+                                    <strong>Missed video call </strong>
+                                    <span class="badge">2</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="friend">
+                            <div class="friend-image">
+                                <img class="image-circle" src="/images/backgrounds/inline_image_preview.jpg" alt="">
+                            </div>
+                            <div class="friend-info">
+                                <div class="friend-name">
+                                    <strong>NkemJW </strong>
+                                    <span>10:16am</span>
+                                </div> 
+                                <div class="friend-msg">
+                                    <strong>Missed video call </strong>
+                                    <span class="badge">2</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="friend">
+                            <div class="friend-image">
+                                <img class="image-circle" src="/images/backgrounds/inline_image_preview.jpg" alt="">
+                            </div>
+                            <div class="friend-info">
+                                <div class="friend-name">
+                                    <strong>NkemJW </strong>
+                                    <span>10:16am</span>
+                                </div> 
+                                <div class="friend-msg">
+                                    <strong>Missed video call </strong>
+                                    <span class="badge">2</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div id="message-area">
-                this is a div
+                <div id="message-area-text">
+                    <img src="/images/backgrounds/wa.png" alt="">
+                    <h1>
+                        Keep your phone connected
+                    </h1>
+                    <p>
+                        Whatsapp connects to your phone to sync messages. To reduce data usuage, connect your phone to WiFI.
+                    </p>
+                </div>
             </div>
         </div>
     </div>
