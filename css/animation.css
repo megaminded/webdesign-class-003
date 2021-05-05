@@ -1,0 +1,25 @@
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    margin: 250px auto;
+    animation: rotate 5s ease-in-out infinite;
+}
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+        width: 300px;
+        height: 0px;    
+    }
+    30%{
+        display: none;
+    }
+    50%{
+       background-color: blue;
+       border-radius: 100%;
+    }
+    100%{
+        transform: rotate(360deg);
+        /* transform: scale(8); */
+    }
+}
